@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #F5F5F5;
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#physics-world {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: auto;
+    cursor: grab;
+}
+
+#physics-world:active {
+    cursor: grabbing;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    padding: 40px 0;
+    z-index: 10;
+}
+
+.logo-home-button {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-right: 20px;
+}
+
+.logo-home-button:hover {
+    transform: scale(1.05);
+}
+
+.logo-image {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0 60px;
+    margin-right: 10px;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-button.active {
+    background-color: #B31B1B;
+    color: white;
+}
+
+.nav-button:hover:not(.active) {
+    background-color: #E5E5E5;
+}
+
+/* Add hover state for active button with inverted colors */
+.nav-button.active:hover {
+    background-color: #E5E5E5;
+    color: #B31B1B;
+}
+
+/* Registration Badge */
+.registration-badge {
+    position: absolute;
+    top: 80px;
+    left: 40px;
+    z-index: 10;
+    width: 200px;
+    height: 200px;
+}
+
+/* Star container positioning */
+.star-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+}
+
+.star-front {
+    z-index: 15;
+    pointer-events: none;
+}
+
+/* Orbiting text container */
+.orbiting-text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    z-index: 12;
+    pointer-events: none;
+}
+
+.orbiting-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+/* CircleType generated spans */
+.orbiting-text span {
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+/* Animation for the entire text circle */
+@keyframes rotateText {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+.orbiting-text.animated {
+    animation: rotateText 12s linear infinite;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    text-align: left;
+    position: relative;
+    z-index: 5;
+    padding: 0 40px;
+}
+
+.title-container {
+    max-width: 800px;
+}
+
+.main-title {
+    /* Base styles; specific sizes handled by child spans */
+    font-weight: 600;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+/* Small subtitle (Cornell University) */
+.title-small {
+    font-size: 32px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Large main title (Big Red Math Competition) */
+.title-large {
+    font-size: 62px;
+    font-weight: 700;
+}
+
+.big-red {
+    color: #B31B1B;
+    font-weight: 700;
+}
+
+/* Math Symbols */
+.math-symbols {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.symbol {
+    position: absolute;
+    font-size: 24px;
+    font-weight: 500;
+    color: #333;
+    user-select: none;
+    pointer-events: none;
+    z-index: 3;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.2s ease;
+}
+
+/* Specific symbol styles */
+.symbol-cube {
+    font-size: 160px;
+}
+
+.symbol-i {
+    font-size: 180px;
+    font-style: italic;
+}
+
+.symbol-e {
+    font-size: 168px;
+    font-style: italic;
+}
+
+.symbol-circle {
+    font-size: 252px;
+}
+
+.symbol-plus {
+    font-size: 140px;
+    font-weight: 600;
+}
+
+.symbol-triangle {
+    font-size: 160px;
+}
+
+.symbol-pi {
+    font-size: 268px;
+}
+
+.symbol-dot {
+    font-size: 120px;
+    font-weight: 900;
+}
+
+.symbol-f {
+    font-size: 180px;
+    font-style: italic;
+}
+
+.symbol-multiply {
+    font-size: 340px;
+    font-weight: 600;
+}
+
+.symbol-theta {
+    font-size: 168px;
+    font-style: italic;
+}
+
+.symbol-integral {
+    font-size: 200px;
+}
+
+.symbol-infinity {
+    font-size: 260px;
+}
+
+.symbol-angle {
+    font-size: 152px;
+}
+
+.symbol-sigma {
+    font-size: 240px;
+}
+
+.symbol-spade {
+    font-size: 220px;
+}
+
+.symbol-clubs {
+    font-size: 220px;
+}
+
+.symbol-cIntegral {
+    font-size: 220px;
+}
+
+.symbol-star{
+    font-size: 190px;
+}
+
+.symbol-equality{
+    font-size: 220px;
+}
+
+.symbol-sigma{
+    font-size: 200px;
+}
+
+.symbol-div{
+    font-size: 220px;
+}
+
+.symbol-delta{
+    font-size: 240px;
+}
+
+/* Dots Pattern */
+.dots-pattern {
+    position: fixed;
+    right: 30px;
+    top: 0;
+    height: 100vh;
+    width: 60px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    gap: 10px;
+    padding: 20px;
+    z-index: 4;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #B31B1B;
+    border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 0;
+    }
+    
+    .navigation {
+        gap: 15px;
+        margin: 0 40px;
+    }
+    
+    .logo-home-button {
+        margin-right: 15px;
+    }
+    
+    .logo-image {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .nav-button {
+        font-size: 10px;
+        padding: 6px 12px;
+    }
+    
+    .main-title {
+        font-size: 24px;
+    }
+    
+    .registration-badge {
+        left: 20px;
+        top: 100px;
+    }
+    
+    .main-content {
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 0 20px;
+    }
+    
+    .logo-home-button {
+        margin-right: 10px;
+    }
+    
+    .logo-image {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .main-title {
+        font-size: 20px;
+    }
+    
+    .registration-badge {
+        display: none;
+    }
+} 

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cornell University - Big Red Math Competition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.19.0/matter.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+    <!-- Matter.js canvas container -->
+    <div id="physics-world"></div>
+    
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="logo-home-button" onclick="window.location.href='/'">
+            <img src="assets/logo.png" alt="Big Red Math Club Logo" class="logo-image">
+        </div>
+
+        <nav class="navigation">
+            <button class="nav-button">About</button>
+            <button class="nav-button active">CUBRMC 25</button>
+            <button class="nav-button">Registration</button>
+            <button class="nav-button">Sponsors</button>
+            <button class="nav-button">Archive</button>
+        </nav>
+    </header>
+
+    <!-- Registration Badge -->
+    <div class="registration-badge">
+        <svg viewBox="0 0 200 200" class="star-container" style="width: 200px; height: 200px; transform: rotate(15deg);">
+            <defs>
+                <path id="star-path" d="M100 0 L122 70 L196 70 L136 114 L158 182 L100 140 L42 182 L64 114 L4 70 L78 70 Z" />
+                <clipPath id="clip-back">
+                    <rect x="0" y="0" width="200" height="108" />
+                </clipPath>
+                <clipPath id="clip-front">
+                    <rect x="0" y="107" width="200" height="93" />
+                </clipPath>
+                <path id="text-orbit-path" d="M100,100 m-70,0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0" fill="none" />
+            </defs>
+
+            <use xlink:href="#star-path" fill="#B31B1B" clip-path="url(#clip-back)" />
+
+            <text fill="black" font-family="'Inter', sans-serif" font-size="16" font-weight="600" letter-spacing="2">
+                <textPath id="orbiting-text" xlink:href="#text-orbit-path" class="orbit-text">
+                    2025 REGISTRATION IS NOW OPEN!••• 2025 REGISTRATION IS NOW OPEN!••• 2025 REGISTRATION IS NOW OPEN!••• 2025 REGISTRATION IS NOW OPEN!
+                </textPath>
+            </text>
+
+            <use xlink:href="#star-path" fill="#B31B1B" clip-path="url(#clip-front)" />
+        </svg>
+    </div>
+
+    <main class="main-content">
+        <div class="title-container">
+            <h1 class="main-title">
+                <span class="title-small">Cornell University</span><br>
+                <span class="big-red title-large">Big Red Math Competition</span>
+            </h1>
+        </div>
+    </main>
+
+    <!-- Interactive Math Symbols -->
+    <div class="math-symbols">
+        <div class="symbol symbol-cube">⬜</div>
+        <div class="symbol symbol-i">i</div>
+        <div class="symbol symbol-e">e</div>
+        <div class="symbol symbol-circle">○</div>
+        <div class="symbol symbol-plus">+</div>
+        <div class="symbol symbol-triangle">Δ</div>
+        <div class="symbol symbol-pi">π</div>
+        <div class="symbol symbol-dot">•</div>
+        <div class="symbol symbol-f">f</div>
+        <div class="symbol symbol-multiply">×</div>
+        <div class="symbol symbol-theta">θ</div>
+        <div class="symbol symbol-integral">∫</div>
+        <div class="symbol symbol-infinity">∞</div>
+        <div class="symbol symbol-angle">∠</div>
+        <div class="symbol symbol-sigma">∑</div>
+        <div class="symbol symbol-spade">♠</div>
+        <div class="symbol symbol-clubs">♣</div>
+        <div class="symbol symbol-cIntegral">∮</div>
+        <div class="symbol symbol-star">⍟</div>
+        <div class="symbol symbol-equality">≡</div>
+        <div class="symbol symbol-delta">δ</div>
+        <div class="symbol symbol-div">÷</div>
+        <div class="symbol symbol-sigma">σ</div>
+    </div>
+
+    <!-- red dots pattern on the right -->
+    <div class="dots-pattern">
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+        <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+
+    <!-- main script -->
+    <script src="script.js"></script>
+</body>
+</html>
