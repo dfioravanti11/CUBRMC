@@ -36,12 +36,15 @@ body {
     align-items: center;
     padding: 40px 0;
     z-index: 10;
+    gap: 30px;
 }
 
 .logo-home-button {
     cursor: pointer;
     transition: transform 0.3s ease;
-    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .logo-home-button:hover {
@@ -49,8 +52,8 @@ body {
 }
 
 .logo-image {
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     object-fit: contain;
 }
 
@@ -58,8 +61,6 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
-    margin: 0 60px;
-    margin-right: 10px;
 }
 
 .nav-button {
@@ -90,77 +91,7 @@ body {
     color: #B31B1B;
 }
 
-/* Registration Badge */
-.registration-badge {
-    position: absolute;
-    top: 80px;
-    left: 40px;
-    z-index: 10;
-    width: 200px;
-    height: 200px;
-}
 
-/* Star container positioning */
-.star-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-}
-
-.star-front {
-    z-index: 15;
-    pointer-events: none;
-}
-
-/* Orbiting text container */
-.orbiting-text-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    z-index: 12;
-    pointer-events: none;
-}
-
-.orbiting-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: 'Inter', sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    color: #000;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-}
-
-/* CircleType generated spans */
-.orbiting-text span {
-    color: #000;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-/* Animation for the entire text circle */
-@keyframes rotateText {
-    from {
-        transform: translate(-50%, -50%) rotate(0deg);
-    }
-    to {
-        transform: translate(-50%, -50%) rotate(360deg);
-    }
-}
-
-.orbiting-text.animated {
-    animation: rotateText 12s linear infinite;
-}
 
 /* Main Content */
 .main-content {
@@ -355,20 +286,16 @@ body {
 @media (max-width: 768px) {
     .header {
         padding: 15px 0;
+        gap: 20px;
     }
     
     .navigation {
         gap: 15px;
-        margin: 0 40px;
-    }
-    
-    .logo-home-button {
-        margin-right: 15px;
     }
     
     .logo-image {
-        width: 60px;
-        height: 60px;
+        width: 40px;
+        height: 40px;
     }
     
     .nav-button {
@@ -380,25 +307,20 @@ body {
         font-size: 24px;
     }
     
-    .registration-badge {
-        left: 20px;
-        top: 100px;
-    }
-    
     .main-content {
         padding: 0 20px;
     }
 }
 
 @media (max-width: 480px) {
-    .navigation {
+    .header {
+        gap: 15px;
         flex-wrap: wrap;
-        gap: 10px;
-        margin: 0 20px;
+        justify-content: center;
     }
     
-    .logo-home-button {
-        margin-right: 10px;
+    .navigation {
+        gap: 10px;
     }
     
     .logo-image {
@@ -408,9 +330,5 @@ body {
     
     .main-title {
         font-size: 20px;
-    }
-    
-    .registration-badge {
-        display: none;
     }
 } 

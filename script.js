@@ -342,21 +342,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     window.mathPhysics = physics;
 
-    if (typeof gsap !== 'undefined') {
-        // Animate the textPath startOffset to create circular motion like Saturn's rings
-        gsap.to("#orbiting-text", {
-            duration: 8,
-            repeat: -1,
-            ease: "none",
-            attr: { startOffset: "100%" },
-            modifiers: {
-                startOffset: (value) => {
-                    const num = parseFloat(value);
-                    return (num % 100) + "%";
-                }
-            }
-        });
-    } else {
-        console.error("GSAP not loaded :P");
-    }
+
 }); 
