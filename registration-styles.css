@@ -1,0 +1,481 @@
+/* Registration Page Specific Styles */
+
+/* Override body styles for registration page */
+.registration-page {
+    overflow: auto;
+    background-color: #F5F5F5;
+}
+
+/* Remove physics world for registration page */
+.registration-page #physics-world {
+    display: none;
+}
+
+/* Main Content Layout - Same as about page */
+.registration-main {
+    margin-left: 300px;
+    padding: 40px 60px;
+    max-width: 1200px;
+}
+
+.registration-content {
+    width: 100%;
+}
+
+/* Section Styles - Same as about page */
+.section {
+    padding: 60px 0;
+}
+
+.section-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #B31B1B;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.section-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 32px;
+    line-height: 1.3;
+}
+
+.section-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Important Dates Timeline */
+.dates-timeline {
+    margin-top: 40px;
+}
+
+.date-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.date-item:hover {
+    transform: translateY(-2px);
+}
+
+.date-item.important {
+    border-left: 4px solid #B31B1B;
+    background-color: #FFF9F9;
+}
+
+.date-marker {
+    width: 12px;
+    height: 12px;
+    background-color: #B31B1B;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.date-content {
+    flex: 1;
+}
+
+.date-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 4px;
+}
+
+.date-time {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #B31B1B;
+    margin: 0;
+}
+
+/* Registration Process Grid */
+.registration-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.registration-type {
+    background-color: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.registration-type-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #B31B1B;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.registration-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Steps List */
+.steps-list {
+    margin-bottom: 24px;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.step-number {
+    width: 28px;
+    height: 28px;
+    background-color: #B31B1B;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-right: 16px;
+    flex-shrink: 0;
+}
+
+.step-content {
+    flex: 1;
+}
+
+.step-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Individual Info */
+.individual-info {
+    margin-bottom: 24px;
+}
+
+.individual-info p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+/* Registration Links */
+.registration-link {
+    color: #B31B1B;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.registration-link:hover {
+    color: #9A1515;
+}
+
+/* Register Buttons */
+.register-button-container {
+    text-align: center;
+    margin-top: 24px;
+}
+
+.register-button {
+    display: inline-block;
+    background-color: #B31B1B;
+    color: white;
+    text-decoration: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.register-button:hover {
+    background-color: #9A1515;
+    transform: translateY(-2px);
+}
+
+/* Support Info */
+.support-info {
+    margin-top: 40px;
+    text-align: center;
+    padding: 24px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.support-info p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    margin: 0;
+}
+
+.support-link {
+    color: #B31B1B;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.support-link:hover {
+    color: #9A1515;
+}
+
+/* Eligibility Section */
+.eligibility-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.eligibility-type {
+    background-color: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.eligibility-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #B31B1B;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.eligibility-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.eligibility-list li {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.eligibility-list li::before {
+    content: "•";
+    color: #B31B1B;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Fees Section */
+.fees-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 40px;
+}
+
+.fee-item {
+    background-color: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.fee-item:hover {
+    transform: translateY(-4px);
+}
+
+.fee-item.early-bird {
+    border: 2px solid #28A745;
+}
+
+.fee-item.normal {
+    border: 2px solid #B31B1B;
+}
+
+.fee-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 16px;
+}
+
+.fee-amount {
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #B31B1B;
+    margin-bottom: 8px;
+}
+
+.early-bird .fee-amount {
+    color: #28A745;
+}
+
+.fee-deadline {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #666;
+    margin: 0;
+}
+
+.fee-info {
+    margin-top: 40px;
+    background-color: white;
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.fee-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.fee-policies {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.policy-item {
+    padding: 20px;
+    background-color: #F9F9F9;
+    border-radius: 8px;
+}
+
+.policy-item h4 {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #B31B1B;
+    margin-bottom: 12px;
+}
+
+.policy-item p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .registration-main {
+        margin-left: 130px;
+        padding: 40px 40px;
+    }
+    
+    .registration-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .eligibility-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fees-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .fee-policies {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-main {
+        margin-left: 0;
+        padding: 40px 20px;
+    }
+    
+    .section-title {
+        font-size: 36px;
+    }
+    
+    .section-subtitle {
+        font-size: 20px;
+    }
+    
+    .date-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .date-marker {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .registration-main {
+        padding: 20px 15px;
+    }
+    
+    .section-title {
+        font-size: 28px;
+    }
+    
+    .section-subtitle {
+        font-size: 18px;
+    }
+} 
