@@ -196,8 +196,9 @@ body {
 
 /* Large main title (Big Red Math Competition) */
 .title-large {
-    font-size: 62px;
+    font-size: 60px;
     font-weight: 700;
+    
 }
 
 .big-red {

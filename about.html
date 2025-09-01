@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cornell University Big Red Math Competition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about-styles.css">
+</head>
+<body class="about-page">
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="logo-home-button" onclick="window.location.href='index.html'">
+            <img src="assets/logo.png" alt="Big Red Math Club Logo" class="logo-image">
+        </div>
+
+        <nav class="navigation">
+            <button class="nav-button active" onclick="window.location.href='about.html'">About</button>
+            <button class="nav-button" onclick="window.location.href='index.html'">CUBRMC 25</button>
+            <button class="nav-button">Registration</button>
+            <button class="nav-button">Sponsors</button>
+            <button class="nav-button">Archive</button>
+        </nav>
+    </header>
+
+    <!-- Left Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-nav">
+            <button class="sidebar-button active" data-section="overview">
+                <img src="assets/question.png" alt="Overview" class="sidebar-icon">
+            </button>
+            <button class="sidebar-button" data-section="rules">
+                <img src="assets/list-text.png" alt="Rules" class="sidebar-icon">
+            </button>
+            <button class="sidebar-button" data-section="schedule">
+                <img src="assets/check-list.png" alt="Schedule" class="sidebar-icon">
+            </button>
+            <button class="sidebar-button" data-section="prizes">
+                <img src="assets/star.png" alt="Prizes" class="sidebar-icon">
+            </button>
+            <button class="sidebar-button" data-section="contact">
+                <img src="assets/edit.png" alt="Contact" class="sidebar-icon">
+            </button>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="about-main">
+        <div class="about-content">
+            <!-- Overview Section -->
+            <section id="overview" class="section">
+                <div class="section-content">
+                    <h1 class="section-title">About CUBRMC</h1>
+                    <h2 class="section-subtitle">Welcome to the Cornell University Big Red Math Competition</h2>
+                    <p class="section-text">
+                        The Cornell University Big Red Math Competition (CUBRMC) is an annual mathematics competition 
+                        designed to challenge and inspire high school students from across the nation. Founded with 
+                        the mission of promoting mathematical excellence and problem-solving skills, CUBRMC brings 
+                        together some of the brightest young minds to compete in a prestigious academic environment.
+                    </p>
+                    <p class="section-text">
+                        Our competition features challenging problems across various mathematical disciplines, 
+                        including algebra, geometry, number theory, and combinatorics. Participants have the 
+                        opportunity to showcase their mathematical prowess while experiencing the vibrant 
+                        academic atmosphere of Cornell University.
+                    </p>
+                    <div class="highlight-box">
+                        <h3 class="highlight-title">Our Mission</h3>
+                        <p class="highlight-text">
+                            To foster a love of mathematics, encourage critical thinking, and provide a platform 
+                            for talented students to demonstrate their mathematical abilities on a national stage.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rules Section -->
+            <section id="rules" class="section">
+                <div class="section-content">
+                    <h1 class="section-title">Competition Rules</h1>
+                    <h2 class="section-subtitle">Guidelines and Regulations</h2>
+                    
+                    <div class="rules-grid">
+                        <div class="rule-item">
+                            <h3 class="rule-title">Eligibility</h3>
+                            <ul class="rule-list">
+                                <li>Open to all high school students</li>
+                                <li>Individual and team registrations accepted</li>
+                                <li>No prerequisites required</li>
+                                <li>International students welcome</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <h3 class="rule-title">Competition Format</h3>
+                            <ul class="rule-list">
+                                <li>Multiple rounds of increasing difficulty</li>
+                                <li>Both individual and team portions</li>
+                                <li>Written solutions required</li>
+                                <li>Time limits strictly enforced</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <h3 class="rule-title">Materials Allowed</h3>
+                            <ul class="rule-list">
+                                <li>Pencils and erasers only</li>
+                                <li>No calculators permitted</li>
+                                <li>No electronic devices</li>
+                                <li>Scratch paper provided</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-item">
+                            <h3 class="rule-title">Conduct</h3>
+                            <ul class="rule-list">
+                                <li>Maintain academic integrity</li>
+                                <li>Respect fellow competitors</li>
+                                <li>Follow proctor instructions</li>
+                                <li>No communication during rounds</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="rule-item rule-item-wide">
+                            <h3 class="rule-title">Additional Information</h3>
+                            <ul class="rule-list">
+                                <li>Participants must arrive 30 minutes before the competition start time for check-in and orientation</li>
+                                <li>All solutions must be written clearly in blue or black ink or pencil - illegible work will not be graded</li>
+                                <li>Food and beverages will be provided during designated break times - no outside food allowed in competition areas</li>
+                                <li>Photography and recording devices are strictly prohibited during competition rounds to maintain fairness</li>
+                                <li>Parents and guardians are welcome to attend the awards ceremony but must remain in designated viewing areas</li>
+                                <li>Emergency contact information must be provided during registration and kept updated throughout the event</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Schedule Section -->
+            <section id="schedule" class="section">
+                <div class="section-content">
+                    <h1 class="section-title">Event Schedule</h1>
+                    <h2 class="section-subtitle">Competition Day Timeline</h2>
+                    
+                    <div class="schedule-timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-time">8:00 AM</div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Registration & Check-in</h3>
+                                <p class="timeline-description">
+                                    Participants arrive, receive materials, and complete registration process
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">9:00 AM</div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Opening Ceremony</h3>
+                                <p class="timeline-description">
+                                    Welcome address, rules overview, and introduction to the competition format
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">9:30 AM</div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Individual Round 1</h3>
+                                <p class="timeline-description">
+                                    First individual competition round - 90 minutes, 10 problems
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">11:30 AM</div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Break & Refreshments</h3>
+                                <p class="timeline-description">
+                                    30-minute break with snacks and networking opportunity
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">12:00 PM</div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Team Round</h3>
+                                <p class="timeline-description">
+                                    Collaborative problem-solving session - 60 minutes, 5 problems
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">1:00 PM</div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Lunch Break</h3>
+                                <p class="timeline-description">
+                                    Provided lunch and time to explore the Cornell campus
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">2:30 PM</div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Individual Round 2</h3>
+                                <p class="timeline-description">
+                                    Final individual round - 90 minutes, advanced problems
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-time">4:30 PM</div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">Awards Ceremony</h3>
+                                <p class="timeline-description">
+                                    Recognition of winners, closing remarks, and group photo
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Prizes Section -->
+            <section id="prizes" class="section">
+                <div class="section-content">
+                    <h1 class="section-title">Awards & Recognition</h1>
+                    <h2 class="section-subtitle">Celebrating Mathematical Excellence</h2>
+                    
+                    <div class="prizes-grid">
+                        <div class="prize-category">
+                            <h3 class="prize-title">Individual Awards</h3>
+                            <div class="prize-list">
+                                <div class="prize-item gold">
+                                    <div class="prize-rank">1st Place</div>
+                                    <div class="prize-details">
+                                        <div class="prize-name">Gold Medal</div>
+                                        <div class="prize-value">$1,000 Scholarship</div>
+                                    </div>
+                                </div>
+                                <div class="prize-item silver">
+                                    <div class="prize-rank">2nd Place</div>
+                                    <div class="prize-details">
+                                        <div class="prize-name">Silver Medal</div>
+                                        <div class="prize-value">$750 Scholarship</div>
+                                    </div>
+                                </div>
+                                <div class="prize-item bronze">
+                                    <div class="prize-rank">3rd Place</div>
+                                    <div class="prize-details">
+                                        <div class="prize-name">Bronze Medal</div>
+                                        <div class="prize-value">$500 Scholarship</div>
+                                    </div>
+                                </div>
+                                <div class="prize-item honorable">
+                                    <div class="prize-rank">Top 10</div>
+                                    <div class="prize-details">
+                                        <div class="prize-name">Certificate of Excellence</div>
+                                        <div class="prize-value">Cornell Merchandise</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="prize-category">
+                            <h3 class="prize-title">Team Awards</h3>
+                            <div class="prize-list">
+                                <div class="prize-item gold">
+                                    <div class="prize-rank">1st Place</div>
+                                    <div class="prize-details">
+                                        <div class="prize-name">Champion Trophy</div>
+                                        <div class="prize-value">$500 per member</div>
+                                    </div>
+                                </div>
+                                <div class="prize-item silver">
+                                    <div class="prize-rank">2nd Place</div>
+                                    <div class="prize-details">
+                                        <div class="prize-name">Runner-up Trophy</div>
+                                        <div class="prize-value">$300 per member</div>
+                                    </div>
+                                </div>
+                                <div class="prize-item bronze">
+                                    <div class="prize-rank">3rd Place</div>
+                                    <div class="prize-details">
+                                        <div class="prize-name">Third Place Trophy</div>
+                                        <div class="prize-value">$200 per member</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="additional-recognition">
+                        <h3 class="recognition-title">Additional Recognition</h3>
+                        <div class="recognition-grid">
+                            <div class="recognition-item">
+                                <h4>Perfect Score Award</h4>
+                                <p>Special recognition for any participant achieving a perfect score</p>
+                            </div>
+                            <div class="recognition-item">
+                                <h4>Most Improved</h4>
+                                <p>For participants showing exceptional improvement between rounds</p>
+                            </div>
+                            <div class="recognition-item">
+                                <h4>Best Team Spirit</h4>
+                                <p>Recognizing outstanding collaboration and sportsmanship</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contact" class="section">
+                <div class="section-content">
+                    <h1 class="section-title">Contact Us</h1>
+                    <h2 class="section-subtitle">Get in Touch</h2>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h3 class="contact-title">Competition Coordinators</h3>
+                            <div class="contact-item">
+                                <h4>Professor XiaoDong Cao</h4>
+                                <p class="contact-role">Faculty Advisor</p>
+                                <p class="contact-detail">xiaodongcao@cornell.edu</p>
+                                <p class="contact-detail">(xxx) xxx-4013</p>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <h4>Aryaan Jena</h4>
+                                <p class="contact-role">CUBRMC Co-President</p>
+                                <p class="contact-detail">xxxx@cornell.edu</p>
+                                <p class="contact-detail">(xxx) xxx-4028</p>
+                            </div>
+                            
+                            <div class="contact-item">
+                                <h4>Lucas Jabababa</h4>
+                                <p class="contact-role">CUBRMC Co-President</p>
+                                <p class="contact-detail">xxx@cornell.edu</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4>Carrie Chen</h4>
+                                <p class="contact-role">CUBRMC Website Czar</p>
+                                <p class="contact-detail">xxx@cornell.edu</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-form">
+                            <h3 class="contact-title">Send us a Message</h3>
+                            <form class="message-form">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <select id="subject" name="subject" required>
+                                        <option value="">Select a topic...</option>
+                                        <option value="registration">Registration</option>
+                                        <option value="competition">Competition Rules</option>
+                                        <option value="travel">Travel & Accommodations</option>
+                                        <option value="general">General Inquiry</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" rows="5" required></textarea>
+                                </div>
+                                
+                                <button type="submit" class="submit-button">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+                    
+                    <div class="location-info">
+                        <h3 class="contact-title">Location</h3>
+                        <div class="location-details">
+                            <p><strong>Cornell University</strong></p>
+                            <p>Ithaca, NY 14853</p>
+                            <p>Competition will be held in the Mathematics Department</p>
+                            <p>Malott Hall, Room 310</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="about-script.js"></script>
+</body>
+</html> 
