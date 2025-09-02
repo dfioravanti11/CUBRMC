@@ -4,53 +4,58 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollWrapper = document.querySelector('.scrolling-wrapper');
     
     if (scrollWrapper) {
-        let scrollDirection = 1; // 1 for right, -1 for left
-        let isUserScrolling = false;
-        let userScrollTimeout;
+        let isUserInteracting = false;
+        let userInteractionTimeout;
+        let scrollPosition = 0;
         
-        // Auto-scroll function
+        // Clone images for seamless loop
+        const images = scrollWrapper.querySelectorAll('.image-card');
+        const imageWidth = 316; // 300px image + 16px margin
+        
+        // Clone all images and append them for seamless scrolling
+        images.forEach(img => {
+            const clone = img.cloneNode(true);
+            scrollWrapper.appendChild(clone);
+        });
+        
+        // Auto-scroll function with wrap-around
         function autoScroll() {
-            if (!isUserScrolling) {
-                const maxScroll = scrollWrapper.scrollWidth - scrollWrapper.clientWidth;
-                const currentScroll = scrollWrapper.scrollLeft;
+            if (!isUserInteracting) {
+                scrollPosition += 2; // Faster scroll speed (2px per frame)
                 
-                // Check if we've reached the end or beginning
-                if (currentScroll >= maxScroll) {
-                    scrollDirection = -1; // Start scrolling left
-                } else if (currentScroll <= 0) {
-                    scrollDirection = 1; // Start scrolling right
+                const totalWidth = images.length * imageWidth;
+                
+                // Reset position when we've scrolled past the original set
+                if (scrollPosition >= totalWidth) {
+                    scrollPosition = 0;
                 }
                 
-                // Scroll by 1 pixel in the current direction
-                scrollWrapper.scrollLeft += scrollDirection;
+                scrollWrapper.scrollLeft = scrollPosition;
             }
         }
         
-        // Detect user scrolling
-        scrollWrapper.addEventListener('scroll', () => {
-            isUserScrolling = true;
-            
-            // Clear existing timeout
-            clearTimeout(userScrollTimeout);
-            
-            // Resume auto-scroll after user stops scrolling for 3 seconds
-            userScrollTimeout = setTimeout(() => {
-                isUserScrolling = false;
-            }, 3000);
-        });
-        
         // Pause auto-scroll when mouse is over the gallery
         scrollWrapper.addEventListener('mouseenter', () => {
-            isUserScrolling = true;
+            isUserInteracting = true;
         });
         
         // Resume auto-scroll when mouse leaves the gallery
         scrollWrapper.addEventListener('mouseleave', () => {
-            isUserScrolling = false;
+            clearTimeout(userInteractionTimeout);
+            userInteractionTimeout = setTimeout(() => {
+                isUserInteracting = false;
+            }, 1000); // Resume after 1 second
         });
         
-        // Start auto-scrolling
-        setInterval(autoScroll, 50); // Scroll every 50ms for smooth animation
+        // Handle manual scrolling
+        scrollWrapper.addEventListener('scroll', () => {
+            if (!isUserInteracting) {
+                scrollPosition = scrollWrapper.scrollLeft;
+            }
+        });
+        
+        // Start auto-scrolling with faster interval
+        setInterval(autoScroll, 20); // Every 20ms for smoother, faster animation
     }
 
     // Sidebar navigation functionality
