@@ -14,11 +14,39 @@
 /* Sidebar Navigation */
 .sidebar {
     position: fixed;
-    left: 0;
+    left: calc(var(--content-left) - (var(--sidebar-size) + var(--sidebar-gap)));
     top: 50%;
     transform: translateY(-50%);
-    z-index: 20;
-    padding: 360px;
+    z-index: 5; /* Lower than header z-index: 10 to prevent blocking navigation */
+    padding: 0;
+    
+}
+
+.about-page {
+    --content-left: 430px; /* matches .about-main margin-left on large screens */
+    --sidebar-size: 40px;  /* .sidebar-button width/height */
+    --sidebar-gap: 20px;   /* desired gap between sidebar and content */
+}
+
+/* Responsive sidebar positioning anchored 20px left of main content */
+/* Default: about-main margin-left = 430px */
+@media (min-width: 1400px) {
+    .about-page { --content-left: 430px; }
+}
+
+/* about-main margin-left = 200px */
+@media (max-width: 1400px) and (min-width: 1200px) {
+    .about-page { --content-left: 200px; }
+}
+
+/* about-main margin-left = 100px */
+@media (max-width: 1200px) and (min-width: 1024px) {
+    .about-page { --content-left: 100px; }
+}
+
+/* Tablets: about-main margin-left = 80px */
+@media (max-width: 1024px) and (min-width: 769px) {
+    .about-page { --content-left: 80px; }
 }
 
 .sidebar-nav {
