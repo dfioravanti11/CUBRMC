@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsors - Cornell University Big Red Math Competition</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="sponsors-styles.css">
+</head>
+<body class="sponsors-page">
+    <!-- Navigation Header (always visible) -->
+    <header class="header">
+        <div class="logo-home-button" onclick="window.location.href='index.html'">
+            <img src="assets/logo.png" alt="Big Red Math Club Logo" class="logo-image">
+        </div>
+
+        <nav class="navigation">
+            <button class="nav-button" onclick="window.location.href='about.html'">About</button>
+            <button class="nav-button" onclick="window.location.href='index.html'">CUBRMC 25</button>
+            <button class="nav-button" onclick="window.location.href='registration.html'">Registration</button>
+            <button class="nav-button active" onclick="window.location.href='sponsors.html'">Sponsors</button>
+            <button class="nav-button">Archive</button>
+        </nav>
+    </header>
+
+    <!-- Heart Animation Container -->
+    <div class="animation-container" id="animationContainer">
+        <svg class="heart-loader" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 90 90" version="1.1">
+            <g class="heart-loader__group">
+                <path class="heart-loader__square" stroke-width="1" fill="none" d="M0,30 0,90 60,90 60,30z"/>
+                <path class="heart-loader__circle m--left" stroke-width="1" fill="none" d="M60,60 a30,30 0 0,1 -60,0 a30,30 0 0,1 60,0"/>
+                <path class="heart-loader__circle m--right" stroke-width="1" fill="none" d="M60,60 a30,30 0 0,1 -60,0 a30,30 0 0,1 60,0"/>
+                <path class="heart-loader__heartPath" stroke-width="2" d="M60,30 a30,30 0 0,1 0,60 L0,90 0,30 a30,30 0 0,1 60,0" />
+            </g>
+        </svg>
+    </div>
+
+    <!-- Main Content (hidden initially) -->
+    <div class="main-content" id="mainContent" style="display: none;">
+
+        <!-- Main Content -->
+        <main class="sponsors-main">
+            <div class="sponsors-content">
+                <section class="sponsors-section">
+                    <div class="section-content">
+                        <div class="heart-text-container">
+                            <div class="heart-text-layout">
+                                <span class="heart-text-we">we</span>
+                                <img src="assets/heart.png" alt="Heart" class="static-heart">
+                                <span class="heart-text-our">our</span>
+                            </div>
+                            <div class="heart-text-sponsors">Sponsors</div>
+                        </div>
+                        
+                        <div class="sponsors-grid">
+                            <!-- Gold Sponsor -->
+                            <div class="sponsor-tier gold">
+                                <h2 class="tier-title">Gold Sponsor</h2>
+                                <div class="sponsor-card">
+                                    <img src="assets/sponsor1.png" alt="Gold Sponsor" class="sponsor-image">
+                                </div>
+                            </div>
+
+                            <!-- Silver Sponsor -->
+                            <div class="sponsor-tier silver">
+                                <h2 class="tier-title">Silver Sponsor</h2>
+                                <div class="sponsor-card">
+                                    <img src="assets/sponsor2.png" alt="Silver Sponsor" class="sponsor-image">
+                                </div>
+                            </div>
+
+                            <!-- Bronze Sponsor -->
+                            <div class="sponsor-tier bronze">
+                                <h2 class="tier-title">Supported By</h2>
+                                <div class="sponsor-card">
+                                    <img src="assets/sponsor3.png" alt="Bronze Sponsor" class="sponsor-image">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <img src="assets/logo.png" alt="Big Red Math Club Logo" class="footer-logo">
+                    <div class="social-links">
+                        <a href="mailto:support@bigredmathcomp.org" class="social-link" title="Email us">
+                            <img src="assets/mail.png" alt="Email" class="social-icon">
+                        </a>
+                        <a href="https://www.instagram.com/wyd.carrie/" target="_blank" class="social-link" title="Follow us on Instagram">
+                            <img src="assets/instagram.png" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="https://www.linkedin.com/in/aryaan-jena-332a00251/" target="_blank" class="social-link" title="Connect on LinkedIn">
+                            <img src="assets/linkedin-logo.png" alt="LinkedIn" class="social-icon">
+                        </a>
+                    </div>
+                </div>
+                <p class="footer-disclaimer">We are a student group acting independently of Cornell University. We take full responsibility for our organization and this web site.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <script src="sponsors-script.js"></script>
+</body>
+</html> 
