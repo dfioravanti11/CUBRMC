@@ -26,11 +26,32 @@
         </nav>
     </header>
 
+    <!-- Left Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-nav">
+            <button class="sidebar-button active" data-section="register">
+                <img src="assets/register.png" alt="Register" class="sidebar-icon">
+            </button>
+            <button class="sidebar-button" data-section="dates">
+                <img src="assets/calendar.png" alt="Dates" class="sidebar-icon">
+            </button>
+            <button class="sidebar-button" data-section="process">
+                <img src="assets/process.png" alt="Process" class="sidebar-icon">
+            </button>
+            <button class="sidebar-button" data-section="check">
+                <img src="assets/check.png" alt="Check" class="sidebar-icon">
+            </button>
+            <button class="sidebar-button" data-section="fees">
+                <img src="assets/receipt.png" alt="Fees" class="sidebar-icon">
+            </button>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <main class="registration-main">
         <div class="registration-content">
             <!-- Header Section -->
-            <section class="section">
+            <section id = "register" class="section">
                 <div class="section-content">
                     <h1 class="section-title">Registration</h1>
                     <h2 class="section-subtitle">Join CUBRMC 2025</h2>
@@ -66,12 +87,20 @@
                         <div class="image-card">
                             <img src="assets/img7.png" alt="Competition Image 7" class="gallery-image">
                         </div>
+                        <div class="image-card">
+                            <img src="assets/img8.png" alt="Competition Image 8" class="gallery-image">
+                        </div>
+                        <div class="image-card">
+                            <img src="assets/img9.png" alt="Competition Image 9" class="gallery-image">
+                        </div>                        <div class="image-card">
+                            <img src="assets/img10.png" alt="Competition Image 8" class="gallery-image">
+                        </div>
                     </div>
                 </div>
             </section>
 
             <!-- Important Dates Section -->
-            <section class="section">
+            <section id = "dates" class="section">
                 <div class="section-content">
                     <h2 class="section-title">Important Dates</h2>
                     
@@ -80,9 +109,9 @@
                             <img src="assets/star.png" alt="Star" class="date-star">
                             <div class="date-item">
                                 <div class="date-content">
-                                    <h3 class="date-title">Early Bird Registration Opens</h3>
+                                    <h3 class="date-title">Registration Opens</h3>
                                     <p class="date-time">Thursday, September 5</p>
-                                    <p class="date-blurb">✨ Be the first to sign up and secure your spot, early birds get the smoothest start and a discount!</p>
+                                    <p class="date-blurb">✨ Be the first to sign up and secure your spot for your team and coach(es)!</p>
                                 </div>
                             </div>
                         </div>
@@ -91,18 +120,7 @@
                             <img src="assets/star.png" alt="Star" class="date-star">
                             <div class="date-item">
                                 <div class="date-content">
-                                    <h3 class="date-title">Early Bird Registration Closes</h3>
-                                    <p class="date-time">Sunday, October 6</p>
-                                    <p class="date-blurb">⏰ Don't miss the chance to register early, time flies faster than you think!</p>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="date-wrapper">
-                            <img src="assets/star.png" alt="Star" class="date-star">
-                            <div class="date-item">
-                                <div class="date-content">
-                                    <h3 class="date-title">Normal Registration Closes</h3>
+                                    <h3 class="date-title">Registration Closes</h3>
                                     <p class="date-time">Sunday, October 13</p>
                                     <p class="date-blurb">📚 Last call to join the competition, make sure your team and captains are ready to go!</p>
                                 </div>
@@ -124,7 +142,7 @@
             </section>
 
             <!-- Registration Process Section -->
-            <section class="section">
+            <section id = "process" class="section">
                 <div class="section-content">
                     <h2 class="section-title">Registration Process</h2>
                     
@@ -191,13 +209,13 @@
                     </div>
                     
                     <div class="support-info">
-                        <p>For further support and confirmation, please email <a href="mailto:support@bigredmathcomp.org" class="support-link">support@bigredmathcomp.org</a>.</p>
+                        <p>For further support and confirmation, please email <a href="mailto:cmc@bigredmathcomp.org" class="support-link">cmc@bigredmathcomp.org</a>.</p>
                     </div>
                 </div>
             </section>
 
             <!-- Eligibility Section -->
-            <section class="section">
+            <section id = "check" class="section">
                 <div class="section-content">
                     <h2 class="section-title">Eligibility</h2>
                     
@@ -229,17 +247,12 @@
             </section>
 
             <!-- Registration Fees Section -->
-            <section class="section">
+            <section id = "fees" class="section">
                 <div class="section-content">
                     <h2 class="section-title">Registration Fees</h2>
                     
                     <div class="fees-grid">
-                        <div class="fee-item early-bird">
-                            <h3 class="fee-title">Early Bird Registration</h3>
-                            <div class="fee-amount">$15 per student</div>
-                            <p class="fee-deadline">Until October 6</p>
-                        </div>
-                        
+ 
                         <div class="fee-item normal">
                             <h3 class="fee-title">Normal Registration</h3>
                             <div class="fee-amount">$25 per student</div>
