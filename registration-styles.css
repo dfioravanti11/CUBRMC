@@ -29,7 +29,7 @@
     left: 0;
     top: 50%;
     transform: translateY(-50%);
-    z-index: 20;
+    z-index: 5; /* Lower than header z-index: 10 */
     padding: 360px;
 }
 
