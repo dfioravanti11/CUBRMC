@@ -199,6 +199,17 @@
     padding-top: 0; /* Remove extra top padding since header is separate */
 }
 
+/* Responsive layout adjustments for sponsors */
+@media (max-width: 1200px) {
+    .sponsors-main {
+        padding: 1.5rem;
+    }
+    
+    .sponsors-content {
+        padding: 1.5rem 0 3rem 0;
+    }
+}
+
 .sponsors-content {
     max-width: 1200px;
     margin: 0 auto;
@@ -364,7 +375,22 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1400px) {
+    .sponsors-main {
+        padding: 3rem;
+    }
+    
+    .heart-text-we,
+    .heart-text-our {
+        font-size: 5rem;
+    }
+    
+    .heart-text-sponsors {
+        font-size: 5rem;
+    }
+}
+
+@media (min-width: 1400px) {
     .sponsors-main {
         padding: 4rem;
     }

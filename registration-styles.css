@@ -19,6 +19,23 @@
     max-width: 1200px;
 }
 
+/* Responsive layout adjustments */
+@media (max-width: 1400px) {
+    .registration-main {
+        margin-left: 200px;
+        margin-right: 200px;
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .registration-main {
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 30px 30px;
+    }
+}
+
 .registration-content {
     width: 100%;
 }
@@ -560,8 +577,9 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
     .registration-main {
-        margin-left: 130px;
-        padding: 40px 40px;
+        margin-left: 80px;
+        margin-right: 80px;
+        padding: 30px 30px;
     }
     
     .registration-grid {

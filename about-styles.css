@@ -76,7 +76,23 @@
     padding: 40px 60px;
     max-width: 1200px;
     margin-right: 430px;
+}
 
+/* Responsive layout adjustments */
+@media (max-width: 1400px) {
+    .about-main {
+        margin-left: 200px;
+        margin-right: 200px;
+        padding: 40px 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-main {
+        margin-left: 100px;
+        margin-right: 100px;
+        padding: 30px 30px;
+    }
 }
 
 .about-content {
@@ -532,8 +548,9 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
     .about-main {
-        margin-left: 130px;
-        padding: 40px 40px;
+        margin-left: 80px;
+        margin-right: 80px;
+        padding: 30px 30px;
     }
     
     .prizes-grid {
