@@ -82,7 +82,23 @@
     filter: invert(0.5);
 }
 
+.logo-home-button {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.logo-home-button:hover {
+    transform: scale(1.05);
+}
+
+.logo-image {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
 
 
 /* Section Styles - Same as about page */
