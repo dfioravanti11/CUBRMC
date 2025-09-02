@@ -221,10 +221,11 @@
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     font-weight: 600;
-    min-width: 80px;
+    min-width: 100px;
     text-align: center;
     margin-right: 24px;
     flex-shrink: 0;
+
 }
 
 .timeline-content {
