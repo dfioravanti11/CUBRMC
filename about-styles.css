@@ -134,6 +134,11 @@
     scroll-margin-top: 120px;
 }
 
+/* Override min-height for lecture section since it has less content */
+.section#lecture {
+    min-height: auto;
+}
+
 .section-content {
     max-width: 900px;
     margin: 0 auto;
