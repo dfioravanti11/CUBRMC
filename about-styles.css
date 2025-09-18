@@ -14,39 +14,44 @@
 /* Sidebar Navigation */
 .sidebar {
     position: fixed;
-    left: calc(var(--content-left) - (var(--sidebar-size) + var(--sidebar-gap)));
+    left: 0;
     top: 50%;
     transform: translateY(-50%);
     z-index: 5; /* Lower than header z-index: 10 to prevent blocking navigation */
-    padding: 0;
-    
-}
-
-.about-page {
-    --content-left: 430px; /* matches .about-main margin-left on large screens */
-    --sidebar-size: 40px;  /* .sidebar-button width/height */
-    --sidebar-gap: 20px;   /* desired gap between sidebar and content */
+    padding: 20px;
 }
 
 /* Responsive sidebar positioning anchored 20px left of main content */
 /* Default: about-main margin-left = 430px */
 @media (min-width: 1400px) {
-    .about-page { --content-left: 430px; }
+    .sidebar {
+        left: 350px; /* 430 - ~80 (sidebar width + 20px gap) */
+        padding-left: 0;
+    }
 }
 
 /* about-main margin-left = 200px */
 @media (max-width: 1400px) and (min-width: 1200px) {
-    .about-page { --content-left: 200px; }
+    .sidebar {
+        left: 120px; /* 200 - ~80 */
+        padding-left: 0;
+    }
 }
 
 /* about-main margin-left = 100px */
 @media (max-width: 1200px) and (min-width: 1024px) {
-    .about-page { --content-left: 100px; }
+    .sidebar {
+        left: 20px; /* 100 - ~80 */
+        padding-left: 0;
+    }
 }
 
 /* Tablets: about-main margin-left = 80px */
 @media (max-width: 1024px) and (min-width: 769px) {
-    .about-page { --content-left: 80px; }
+    .sidebar {
+        left: 0px; /* 80 - ~80 keeps a ~20px visual gap due to rounding */
+        padding-left: 0;
+    }
 }
 
 .sidebar-nav {
@@ -137,6 +142,143 @@
 /* Override min-height for lecture section since it has less content */
 .section#lecture {
     min-height: auto;
+}
+
+/* Lecturer Spotlight Styles */
+.lecturer-spotlight {
+    background: linear-gradient(135deg, #fcf8fb 0%, #ffffff 100%);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    padding: 32px;
+    margin: 32px 0 32px 0;
+    border: 1px solid #e2e8f0;
+}
+
+.lecturer-spotlight-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.lecturer-photo {
+    width: 160px;
+    height: 160px;
+    border-radius: 10%;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+    border: 4px solid #ffffff;
+    object-fit: cover;
+}
+
+.guest-lecturer-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #E30B05 ;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.lecturer-name {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.lecturer-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #64748b;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lecturer-bio {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #374151;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.lecturer-bio strong {
+    color: #B31B1B;
+    font-weight: 600;
+}
+
+.lecturer-education {
+    margin-top: 16px;
+    text-align: center;
+}
+
+.education-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.education-detail {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #6b7280;
+    margin: 0;
+}
+
+/* Responsive design for lecturer spotlight */
+@media (min-width: 768px) {
+    .lecturer-spotlight-content {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+    
+    .lecturer-name,
+    .lecturer-title,
+    .lecturer-bio,
+    .lecturer-education {
+        text-align: left;
+    }
+}
+
+/* Lecture Abstract Styles */
+.lecture-abstract {
+    background-color: white;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 24px;
+}
+
+.abstract-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.lecture-abstract .section-text {
+    color: #374151;
+    margin-bottom: 12px;
+}
+
+.lecture-abstract .section-text:last-child {
+    margin-bottom: 0;
+}
+
+.lecture-abstract strong {
+    color: #B31B1B;
+    font-weight: 600;
 }
 
 .section-content {
