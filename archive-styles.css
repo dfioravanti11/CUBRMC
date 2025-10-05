@@ -15,25 +15,20 @@
 
 /* Main Content Layout */
 .archive-main {
-    margin-left: 430px;
-    margin-right: 430px;
-    padding: 40px 60px;
     max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 60px;
 }
 
 /* Responsive layout adjustments */
 @media (max-width: 1400px) {
     .archive-main {
-        margin-left: 200px;
-        margin-right: 200px;
         padding: 40px 40px;
     }
 }
 
 @media (max-width: 1200px) {
     .archive-main {
-        margin-left: 100px;
-        margin-right: 100px;
         padding: 30px 30px;
     }
 }
@@ -271,8 +266,6 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
     .archive-main {
-        margin-left: 60px;
-        margin-right: 60px;
         padding: 30px 30px;
     }
     
@@ -287,8 +280,6 @@
 
 @media (max-width: 768px) {
     .archive-main {
-        margin-left: 0;
-        margin-right: 0;
         padding: 40px 20px;
     }
     
@@ -394,8 +385,6 @@
     border-top: 2px solid #E5E5E5;
     padding: 40px 0;
     margin-top: 80px;
-    margin-left: 430px;
-    margin-right: 430px;
 }
 
 .footer-content {
@@ -459,8 +448,6 @@
 /* Footer Responsive Design */
 @media (max-width: 768px) {
     .footer {
-        margin-left: 0;
-        margin-right: 0;
     }
     
     .footer-content {
