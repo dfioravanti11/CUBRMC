@@ -85,6 +85,62 @@
     margin-right: auto;
 }
 
+/* Winners Section */
+.winners-section {
+    margin-top: 80px;
+}
+
+.winners-section-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #B31B1B;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.winner-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.winner-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background-color: white;
+    border: 2px solid #B31B1B;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.winner-link:hover {
+    background-color: #B31B1B;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(179, 27, 27, 0.3);
+}
+
+.winner-link .link-icon {
+    font-size: 20px;
+}
+
+.winner-link .link-text {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #B31B1B;
+    transition: color 0.3s ease;
+}
+
+.winner-link:hover .link-text {
+    color: white;
+}
+
 /* Archive Grid */
 .archive-grid {
     margin-top: 40px;
@@ -244,6 +300,10 @@
         font-size: 20px;
     }
     
+    .winners-section-title {
+        font-size: 28px;
+    }
+    
     .year-section {
         padding: 24px;
     }
@@ -258,6 +318,11 @@
     
     .materials-grid {
         gap: 20px;
+    }
+    
+    .winner-links {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -274,8 +339,20 @@
         font-size: 18px;
     }
     
+    .winners-section-title {
+        font-size: 24px;
+    }
+    
     .year-section {
         padding: 20px;
+    }
+    
+    .winner-link {
+        padding: 14px 24px;
+    }
+    
+    .winner-link .link-text {
+        font-size: 14px;
     }
     
     .download-link {
