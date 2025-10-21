@@ -251,7 +251,8 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     border-radius: 16px;
     padding: 24px;
-    margin-top: 24px;
+    margin: 24px auto 0 auto;
+    max-width: 900px;
 }
 
 .abstract-title {
