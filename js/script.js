@@ -71,7 +71,7 @@ class MathSymbolPhysics {
         const height = window.innerHeight;
 
         // Ground - move up slightly so symbols don't sink below the bottom edge
-        const ground = Bodies.rectangle(width / 2, height + thickness / 2 -80, width + 100, thickness, {
+        const ground = Bodies.rectangle(width / 2, height + thickness / 2 -60, width + 100, thickness, {
             isStatic: true,
             render: { fillStyle: 'transparent' },
             restitution: 0.8,
@@ -207,6 +207,9 @@ class MathSymbolPhysics {
                 body.circleRadius = symbolData.size / 2;
                 
                 symbolData.element.style.pointerEvents = 'none';
+                // Make symbol visible once positioned
+                symbolData.element.style.opacity = '1';
+                symbolData.element.style.visibility = 'visible';
                 
                 this.symbols.push(body);
                 World.add(this.world, body);

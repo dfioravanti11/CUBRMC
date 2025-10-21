@@ -159,7 +159,9 @@ body {
     pointer-events: none;
     z-index: 3;
     font-family: 'Inter', sans-serif;
-    transition: all 0.2s ease;
+    transition: color 0.2s ease, transform 0.2s ease;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .symbol-cube {
