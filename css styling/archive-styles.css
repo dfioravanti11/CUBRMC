@@ -228,6 +228,10 @@
     border-color: #1E7E34;
 }
 
+.download-link.winners {
+    border-color: #ffdd1b;
+}
+
 .link-icon {
     font-size: 24px;
     margin-right: 16px;
