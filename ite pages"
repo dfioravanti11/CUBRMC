@@ -1,0 +1,36 @@
+[33m8be63a0[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m time consistency
+[33m9b83f84[m redesigning awards
+[33mf3fac38[m check in location
+[33m9751e99[m fixing drop physics
+[33mae405fe[m auto margins for lecture-abstract card
+[33m3f1af0c[m file structure changes
+[33md7f15b7[m top alt stars
+[33mba79b46[m widescreen (16:10) allignement
+[33m8054d96[m winners page reformating
+[33mc079268[m refactoring winners folder
+[33mc56b89c[m past winners
+[33mc7ca792[m scheduling update
+[33m0fb5d7b[m troll
+[33meb68490[m past winners
+[33m12586ea[m math lecture css
+[33me37cdf6[m math lecture highlight
+[33maef5071[m registration date
+[33maf8ca90[m email consistency
+[33m05da10d[m price change
+[33m4e4e888[m date fix
+[33mbe99e0f[m footer updates to adhere to cornell's policy
+[33m324c86b[m sponsor tiers
+[33md872801[m add image
+[33m74fc717[m link updates
+[33m935e80c[m adaptive sidebar positioning
+[33me308a25[m adaptive layouts
+[33maa11e46[m schedule update
+[33m652e95b[m hover animation fix in registration page
+[33m6297113[m z indexing
+[33ma2d0db3[m sponsors
+[33mb04e039[m smoother infinite scroll
+[33m28b6475[m adding images, removing early bird and side scroll bar on registration page
+[33m95ef790[m infinite scroll bar with images and reconfigurated important dates
+[33m2dacc24[m registration information
+[33m12e7c8e[m about page with interactive scrolling side navigation bar
+[33ma6362de[m adding home page
